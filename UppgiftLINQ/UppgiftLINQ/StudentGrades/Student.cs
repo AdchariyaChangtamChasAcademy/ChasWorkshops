@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace UppgiftLINQ.StudentGrades
+{
+    public class Student
+    {
+        public string Name { get; set; }
+        public List<CourseResult> Results { get; set; }
+    }
+}
