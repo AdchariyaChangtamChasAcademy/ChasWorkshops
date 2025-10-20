@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace WorkshopProductFilter
 {
-    internal class Product
+    public class Product
     {
         public string Name { get; set; }
         public string Category { get; set; }
         public decimal Price { get; set; }
+
+        public bool IsValid()
+        {
+            return (!string.IsNullOrWhiteSpace(Category) && Price >= 0);
+        }
     }
 }

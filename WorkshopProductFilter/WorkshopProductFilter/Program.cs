@@ -13,27 +13,10 @@
                 new Product { Name = "Lamp", Category = "Furniture", Price = 500m }
             };
 
-            Console.WriteLine("Choose Category:");
-            Console.WriteLine("[1] Electronics");
-            Console.WriteLine("[2] Furniture");
+            Menu myMenu = new Menu(products);
+            myMenu.Start();
 
-            Console.Write("Choice:");
-            string input = Console.ReadLine();
-
-            switch(input)
-            {
-                case "1":
-                    Console.WriteLine("Electronics");
-                    break;
-
-                case "2":
-                    Console.WriteLine("Furniture");
-                    break;
-
-                default:
-                    Console.WriteLine("Faulty");
-                    break;
-            }
+            Console.ReadLine();
         }
     }
 }
