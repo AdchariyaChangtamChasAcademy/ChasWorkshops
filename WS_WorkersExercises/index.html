@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Workers & Service Workers</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+  </head>
+  <body>
+    <h1>Web Workers</h1>
+
+    <section>
+      <button id="startBtn">Start count</button>
+      <button id="pingBtn">Ping</button>
+      <h2>Result:</h2>
+      <div id="resultCounter"></div>
+    </section>
+
+    <p>___________________________________________________________</p>
+
+    <h1>Text to Upper Case</h1>
+
+    <textarea id="inputText" rows="4" cols="50" placeholder="Input text here..."></textarea>
+    <br><br>
+    <button id="convertBtn">Convert</button>
+
+    <h2>Result:</h2>
+    <p id="resultUpperCaseText"></p>
+
+    <p>___________________________________________________________</p>
+
+    <h1>Sort multiple arrays</h1>
+
+    <button id="sortArraysBtn">Sort arrays</button>
+
+    <h2>Results:</h2>
+    <p>Array [20]: <span id="result1"></span></p>
+    <p>Array [10]: <span id="result2"></span></p>
+    <p>Array [5]: <span id="result3"></span></p>
+
+    <p>___________________________________________________________</p>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
