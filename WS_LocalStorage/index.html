@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Att-göra-lista</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Min att-göra-lista</h1>
+    
+    <section aria-labelledby="add-task-heading">
+      <h2 id="add-task-heading" class="visually-hidden">Lägg till uppgift</h2>
+      <form id="taskForm">
+        <label for="taskInput">Ny uppgift:</label>
+        <input 
+          type="text" 
+          id="taskInput" 
+          name="task"
+          placeholder="Skriv din uppgift här..." 
+          required
+          aria-required="true">
+        <button type="submit" id="addbtn">Lägg till uppgift</button>
+      </form>
+    </section>
+    
+    <section aria-labelledby="task-list-heading">
+      <h2 id="task-list-heading">Mina uppgifter</h2>
+      <ul id="taskList" role="list">
+        <!-- Uppgifter läggs till här dynamiskt -->
+      </ul>
+    </section>
+
+    <h1>Min profil</h1>
+    
+    <form id="profileForm" aria-labelledby="form-heading">
+      <h2 id="form-heading" class="visually-hidden">Profilinformation</h2>
+      
+      <fieldset>
+        <legend>Personuppgifter</legend>
+        
+        <div>
+          <label for="name">Namn:</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name"
+            required
+            aria-required="true">
+        </div>
+        
+        <div>
+          <label for="email">E-post:</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email"
+            required
+            aria-required="true">
+        </div>
+        
+        <div>
+          <label for="age">Ålder:</label>
+          <input 
+            type="number" 
+            id="age" 
+            name="age"
+            min="1"
+            max="120">
+        </div>
+        
+        <div>
+          <label for="city">Stad:</label>
+          <input 
+            type="text" 
+            id="city" 
+            name="city">
+        </div>
+        
+        <div>
+          <label for="interests">Favoritämnen:</label>
+          <textarea 
+            id="interests" 
+            name="interests"
+            rows="5"
+            placeholder="Beskriv dina favoritämnen..."></textarea>
+        </div>
+      </fieldset>
+      
+      <div>
+        <button type="submit">Spara</button>
+        <button type="button" id="clearBtn">Rensa</button>
+      </div>
+    </form>
+    
+    <section id="welcomeMessage" aria-live="polite">
+      <!-- Välkomstmeddelande visas här -->
+    </section>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Async/Await Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 50rem;         /* istället för 800px */
+      margin: 1.25rem auto;     /* istället för 20px */
+      padding: 1.25rem;         /* istället för 20px */
+    }
+    .loading {
+      color: #666;
+      font-style: italic;
+    }
+    .error {
+      color: red;
+    }
+    .success {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Async/Await Demo</h1>
+    </header>
+    
+    <section>
+      <button id="fetchBtn">Hämta användare</button>
+      <button id="multipleBtn">Hämta flera användare</button>
+    </section>
+    
+    <section id="result" role="status" aria-live="polite"></section>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>

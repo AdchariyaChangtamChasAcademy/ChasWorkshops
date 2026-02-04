@@ -1,0 +1,147 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projects\\DOTNET\\Workshop\\WS_EcommerceClient\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1B1611B2-9C66-48B6-8B83-46FEF2158493}|WS_EcommerceClient\\WS_EcommerceClient.csproj|c:\\projects\\dotnet\\workshop\\ws_ecommerceclient\\ws_ecommerceclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B1611B2-9C66-48B6-8B83-46FEF2158493}|WS_EcommerceClient\\WS_EcommerceClient.csproj|solutionrelative:ws_ecommerceclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B1611B2-9C66-48B6-8B83-46FEF2158493}|WS_EcommerceClient\\WS_EcommerceClient.csproj|c:\\projects\\dotnet\\workshop\\ws_ecommerceclient\\ws_ecommerceclient\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1B1611B2-9C66-48B6-8B83-46FEF2158493}|WS_EcommerceClient\\WS_EcommerceClient.csproj|solutionrelative:ws_ecommerceclient\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B1611B2-9C66-48B6-8B83-46FEF2158493}|WS_EcommerceClient\\WS_EcommerceClient.csproj|c:\\projects\\dotnet\\workshop\\ws_ecommerceclient\\ws_ecommerceclient\\models\\ecommercedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B1611B2-9C66-48B6-8B83-46FEF2158493}|WS_EcommerceClient\\WS_EcommerceClient.csproj|solutionrelative:ws_ecommerceclient\\models\\ecommercedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B1611B2-9C66-48B6-8B83-46FEF2158493}|WS_EcommerceClient\\WS_EcommerceClient.csproj|c:\\projects\\dotnet\\workshop\\ws_ecommerceclient\\ws_ecommerceclient\\ws_ecommerceclient.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1B1611B2-9C66-48B6-8B83-46FEF2158493}|WS_EcommerceClient\\WS_EcommerceClient.csproj|solutionrelative:ws_ecommerceclient\\ws_ecommerceclient.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B1611B2-9C66-48B6-8B83-46FEF2158493}|WS_EcommerceClient\\WS_EcommerceClient.csproj|c:\\projects\\dotnet\\workshop\\ws_ecommerceclient\\ws_ecommerceclient\\models\\customerorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B1611B2-9C66-48B6-8B83-46FEF2158493}|WS_EcommerceClient\\WS_EcommerceClient.csproj|solutionrelative:ws_ecommerceclient\\models\\customerorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B1611B2-9C66-48B6-8B83-46FEF2158493}|WS_EcommerceClient\\WS_EcommerceClient.csproj|c:\\projects\\dotnet\\workshop\\ws_ecommerceclient\\ws_ecommerceclient\\models\\orderheader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B1611B2-9C66-48B6-8B83-46FEF2158493}|WS_EcommerceClient\\WS_EcommerceClient.csproj|solutionrelative:ws_ecommerceclient\\models\\orderheader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B1611B2-9C66-48B6-8B83-46FEF2158493}|WS_EcommerceClient\\WS_EcommerceClient.csproj|c:\\projects\\dotnet\\workshop\\ws_ecommerceclient\\ws_ecommerceclient\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B1611B2-9C66-48B6-8B83-46FEF2158493}|WS_EcommerceClient\\WS_EcommerceClient.csproj|solutionrelative:ws_ecommerceclient\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Projects\\DOTNET\\Workshop\\WS_EcommerceClient\\WS_EcommerceClient\\appsettings.json",
+              "RelativeDocumentMoniker": "WS_EcommerceClient\\appsettings.json",
+              "ToolTip": "C:\\Projects\\DOTNET\\Workshop\\WS_EcommerceClient\\WS_EcommerceClient\\appsettings.json",
+              "RelativeToolTip": "WS_EcommerceClient\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-24T13:37:49.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projects\\DOTNET\\Workshop\\WS_EcommerceClient\\WS_EcommerceClient\\Program.cs",
+              "RelativeDocumentMoniker": "WS_EcommerceClient\\Program.cs",
+              "ToolTip": "C:\\Projects\\DOTNET\\Workshop\\WS_EcommerceClient\\WS_EcommerceClient\\Program.cs",
+              "RelativeToolTip": "WS_EcommerceClient\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T12:04:07.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EcommerceDbContext.cs",
+              "DocumentMoniker": "C:\\Projects\\DOTNET\\Workshop\\WS_EcommerceClient\\WS_EcommerceClient\\Models\\EcommerceDbContext.cs",
+              "RelativeDocumentMoniker": "WS_EcommerceClient\\Models\\EcommerceDbContext.cs",
+              "ToolTip": "C:\\Projects\\DOTNET\\Workshop\\WS_EcommerceClient\\WS_EcommerceClient\\Models\\EcommerceDbContext.cs",
+              "RelativeToolTip": "WS_EcommerceClient\\Models\\EcommerceDbContext.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowCMAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T13:27:35.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderHeader.cs",
+              "DocumentMoniker": "C:\\Projects\\DOTNET\\Workshop\\WS_EcommerceClient\\WS_EcommerceClient\\Models\\OrderHeader.cs",
+              "RelativeDocumentMoniker": "WS_EcommerceClient\\Models\\OrderHeader.cs",
+              "ToolTip": "C:\\Projects\\DOTNET\\Workshop\\WS_EcommerceClient\\WS_EcommerceClient\\Models\\OrderHeader.cs",
+              "RelativeToolTip": "WS_EcommerceClient\\Models\\OrderHeader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T13:22:21.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomerOrder.cs",
+              "DocumentMoniker": "C:\\Projects\\DOTNET\\Workshop\\WS_EcommerceClient\\WS_EcommerceClient\\Models\\CustomerOrder.cs",
+              "RelativeDocumentMoniker": "WS_EcommerceClient\\Models\\CustomerOrder.cs",
+              "ToolTip": "C:\\Projects\\DOTNET\\Workshop\\WS_EcommerceClient\\WS_EcommerceClient\\Models\\CustomerOrder.cs",
+              "RelativeToolTip": "WS_EcommerceClient\\Models\\CustomerOrder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T13:19:10.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Projects\\DOTNET\\Workshop\\WS_EcommerceClient\\WS_EcommerceClient\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "WS_EcommerceClient\\Models\\Customer.cs",
+              "ToolTip": "C:\\Projects\\DOTNET\\Workshop\\WS_EcommerceClient\\WS_EcommerceClient\\Models\\Customer.cs",
+              "RelativeToolTip": "WS_EcommerceClient\\Models\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T13:18:51.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WS_EcommerceClient",
+              "DocumentMoniker": "C:\\Projects\\DOTNET\\Workshop\\WS_EcommerceClient\\WS_EcommerceClient\\WS_EcommerceClient.csproj",
+              "RelativeDocumentMoniker": "WS_EcommerceClient\\WS_EcommerceClient.csproj",
+              "ToolTip": "C:\\Projects\\DOTNET\\Workshop\\WS_EcommerceClient\\WS_EcommerceClient\\WS_EcommerceClient.csproj",
+              "RelativeToolTip": "WS_EcommerceClient\\WS_EcommerceClient.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-24T12:43:12.749Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

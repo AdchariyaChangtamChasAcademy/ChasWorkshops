@@ -1,0 +1,140 @@
+/* ---------- Base reset ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+/* ---------- Layout ---------- */
+main {
+  max-width: 700px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 6px;
+}
+
+/* ---------- Headings ---------- */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* ---------- Forms (general) ---------- */
+form {
+  margin-bottom: 30px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 4px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+button {
+  padding: 8px 14px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* ---------- Todo form ---------- */
+#taskForm {
+  display: flex;
+  gap: 10px;
+}
+
+#taskForm input {
+  flex: 1;
+}
+
+#taskForm label {
+  display: none;
+}
+
+/* ---------- Todo list ---------- */
+#taskList {
+  list-style: none;
+  padding: 0;
+}
+
+#taskList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+#taskList li span {
+  flex: 1;
+}
+
+/* Completed todo */
+#taskList input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+  color: #777;
+}
+
+/* ---------- Profile form ---------- */
+fieldset {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+fieldset div {
+  margin-bottom: 10px;
+}
+
+/* Buttons below profile form */
+form > div {
+  display: flex;
+  gap: 10px;
+}
+
+/* ---------- Welcome message ---------- */
+#welcomeMessage {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* ---------- Accessibility helper ---------- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
