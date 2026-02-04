@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Workers & Service Workers</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+  </head>
+  <body>
+    <h1>Web Workers</h1>
+
+    <section>
+      <h2>Blockerande sortering</h2>
+      <button id="sort-blocking">Sortera stor array (blockerar)</button>
+      <button id="ping">Ping</button>
+      <p id="status-blocking">Status: väntar…</p>
+    </section>
+
+    <section>
+      <h2>Sortering med Web Worker</h2>
+      <button id="sort-worker">Sortera stor array (worker)</button>
+      <button id="ping-worker">Ping</button>
+      <p id="status-worker">Status: väntar…</p>
+    </section>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

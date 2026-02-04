@@ -1,0 +1,9 @@
+{
+  "name": "Web Workers & Service Workers Workshop",
+  "short_name": "Workers WS",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1f2933",
+  "icons": []
+}

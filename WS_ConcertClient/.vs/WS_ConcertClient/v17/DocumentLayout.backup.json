@@ -1,0 +1,145 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projects\\DOTNET\\Workshop\\WS_ConcertClient\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B93328F2-631E-4882-A796-9D6C4AA8200C}|WS_ConcertClient\\WS_ConcertClient.csproj|c:\\projects\\dotnet\\workshop\\ws_concertclient\\ws_concertclient\\models\\venue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B93328F2-631E-4882-A796-9D6C4AA8200C}|WS_ConcertClient\\WS_ConcertClient.csproj|solutionrelative:ws_concertclient\\models\\venue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B93328F2-631E-4882-A796-9D6C4AA8200C}|WS_ConcertClient\\WS_ConcertClient.csproj|c:\\projects\\dotnet\\workshop\\ws_concertclient\\ws_concertclient\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B93328F2-631E-4882-A796-9D6C4AA8200C}|WS_ConcertClient\\WS_ConcertClient.csproj|solutionrelative:ws_concertclient\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B93328F2-631E-4882-A796-9D6C4AA8200C}|WS_ConcertClient\\WS_ConcertClient.csproj|c:\\projects\\dotnet\\workshop\\ws_concertclient\\ws_concertclient\\models\\concert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B93328F2-631E-4882-A796-9D6C4AA8200C}|WS_ConcertClient\\WS_ConcertClient.csproj|solutionrelative:ws_concertclient\\models\\concert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B93328F2-631E-4882-A796-9D6C4AA8200C}|WS_ConcertClient\\WS_ConcertClient.csproj|c:\\projects\\dotnet\\workshop\\ws_concertclient\\ws_concertclient\\models\\artist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B93328F2-631E-4882-A796-9D6C4AA8200C}|WS_ConcertClient\\WS_ConcertClient.csproj|solutionrelative:ws_concertclient\\models\\artist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B93328F2-631E-4882-A796-9D6C4AA8200C}|WS_ConcertClient\\WS_ConcertClient.csproj|c:\\projects\\dotnet\\workshop\\ws_concertclient\\ws_concertclient\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B93328F2-631E-4882-A796-9D6C4AA8200C}|WS_ConcertClient\\WS_ConcertClient.csproj|solutionrelative:ws_concertclient\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B93328F2-631E-4882-A796-9D6C4AA8200C}|WS_ConcertClient\\WS_ConcertClient.csproj|c:\\projects\\dotnet\\workshop\\ws_concertclient\\ws_concertclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B93328F2-631E-4882-A796-9D6C4AA8200C}|WS_ConcertClient\\WS_ConcertClient.csproj|solutionrelative:ws_concertclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B93328F2-631E-4882-A796-9D6C4AA8200C}|WS_ConcertClient\\WS_ConcertClient.csproj|c:\\projects\\dotnet\\workshop\\ws_concertclient\\ws_concertclient\\models\\concertdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B93328F2-631E-4882-A796-9D6C4AA8200C}|WS_ConcertClient\\WS_ConcertClient.csproj|solutionrelative:ws_concertclient\\models\\concertdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Projects\\DOTNET\\Workshop\\WS_ConcertClient\\WS_ConcertClient\\appsettings.json",
+              "RelativeDocumentMoniker": "WS_ConcertClient\\appsettings.json",
+              "ToolTip": "C:\\Projects\\DOTNET\\Workshop\\WS_ConcertClient\\WS_ConcertClient\\appsettings.json",
+              "RelativeToolTip": "WS_ConcertClient\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-24T14:35:35.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ConcertDbContext.cs",
+              "DocumentMoniker": "C:\\Projects\\DOTNET\\Workshop\\WS_ConcertClient\\WS_ConcertClient\\Models\\ConcertDbContext.cs",
+              "RelativeDocumentMoniker": "WS_ConcertClient\\Models\\ConcertDbContext.cs",
+              "ToolTip": "C:\\Projects\\DOTNET\\Workshop\\WS_ConcertClient\\WS_ConcertClient\\Models\\ConcertDbContext.cs",
+              "RelativeToolTip": "WS_ConcertClient\\Models\\ConcertDbContext.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAcwDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T14:24:45.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Venue.cs",
+              "DocumentMoniker": "C:\\Projects\\DOTNET\\Workshop\\WS_ConcertClient\\WS_ConcertClient\\Models\\Venue.cs",
+              "RelativeDocumentMoniker": "WS_ConcertClient\\Models\\Venue.cs",
+              "ToolTip": "C:\\Projects\\DOTNET\\Workshop\\WS_ConcertClient\\WS_ConcertClient\\Models\\Venue.cs",
+              "RelativeToolTip": "WS_ConcertClient\\Models\\Venue.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T14:22:35.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Ticket.cs",
+              "DocumentMoniker": "C:\\Projects\\DOTNET\\Workshop\\WS_ConcertClient\\WS_ConcertClient\\Models\\Ticket.cs",
+              "RelativeDocumentMoniker": "WS_ConcertClient\\Models\\Ticket.cs",
+              "ToolTip": "C:\\Projects\\DOTNET\\Workshop\\WS_ConcertClient\\WS_ConcertClient\\Models\\Ticket.cs",
+              "RelativeToolTip": "WS_ConcertClient\\Models\\Ticket.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T14:22:34.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Concert.cs",
+              "DocumentMoniker": "C:\\Projects\\DOTNET\\Workshop\\WS_ConcertClient\\WS_ConcertClient\\Models\\Concert.cs",
+              "RelativeDocumentMoniker": "WS_ConcertClient\\Models\\Concert.cs",
+              "ToolTip": "C:\\Projects\\DOTNET\\Workshop\\WS_ConcertClient\\WS_ConcertClient\\Models\\Concert.cs",
+              "RelativeToolTip": "WS_ConcertClient\\Models\\Concert.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T14:22:34.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Artist.cs",
+              "DocumentMoniker": "C:\\Projects\\DOTNET\\Workshop\\WS_ConcertClient\\WS_ConcertClient\\Models\\Artist.cs",
+              "RelativeDocumentMoniker": "WS_ConcertClient\\Models\\Artist.cs",
+              "ToolTip": "C:\\Projects\\DOTNET\\Workshop\\WS_ConcertClient\\WS_ConcertClient\\Models\\Artist.cs",
+              "RelativeToolTip": "WS_ConcertClient\\Models\\Artist.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T14:22:33.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projects\\DOTNET\\Workshop\\WS_ConcertClient\\WS_ConcertClient\\Program.cs",
+              "RelativeDocumentMoniker": "WS_ConcertClient\\Program.cs",
+              "ToolTip": "C:\\Projects\\DOTNET\\Workshop\\WS_ConcertClient\\WS_ConcertClient\\Program.cs",
+              "RelativeToolTip": "WS_ConcertClient\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T14:09:41.954Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
