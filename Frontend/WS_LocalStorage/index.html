@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocalStorage Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>LocalStorage Demo</h1>
+    </header>
+    
+    <section aria-labelledby="form-heading">
+      <h2 id="form-heading">Spara ditt namn</h2>
+      
+      <form id="nameForm" aria-label="Formulär för att spara namn">
+        <label for="nameInput">Ditt namn:</label>
+        <input 
+          type="text" 
+          id="nameInput" 
+          name="name"
+          placeholder="Skriv ditt namn"
+          aria-label="Namnfält"
+          autocomplete="name"
+        >
+        
+        <div class="button-group" role="group" aria-label="Åtgärdsknappar">
+          <button type="button" id="saveBtn" aria-label="Spara namn">
+            Spara
+          </button>
+          <button type="button" id="loadBtn" aria-label="Ladda sparat namn">
+            Ladda
+          </button>
+          <button type="button" id="clearBtn" aria-label="Rensa sparat namn">
+            Rensa
+          </button>
+        </div>
+      </form>
+    </section>
+    
+    <aside 
+      class="saved-data" 
+      id="output" 
+      role="status" 
+      aria-live="polite"
+      aria-label="Sparad data">
+    </aside>
+
+    <section aria-labelledby="user-form-heading">
+  <h2 id="user-form-heading">Spara användarinfo</h2>
+  
+  <form id="userForm" aria-label="Formulär för att spara användarinformation">
+    <label for="userNameInput">Namn:</label>
+    <input 
+      type="text" 
+      id="userNameInput" 
+      name="userName"
+      placeholder="Namn"
+      aria-label="Användarens namn"
+      autocomplete="name"
+      required
+    >
+    
+    <label for="userEmailInput">E-post:</label>
+    <input 
+      type="email" 
+      id="userEmailInput" 
+      name="userEmail"
+      placeholder="E-post"
+      aria-label="Användarens e-postadress"
+      autocomplete="email"
+      required
+    >
+    
+    <label for="userAgeInput">Ålder:</label>
+    <input 
+      type="number" 
+      id="userAgeInput" 
+      name="userAge"
+      placeholder="Ålder"
+      aria-label="Användarens ålder"
+      min="1"
+      max="120"
+    >
+    
+    <div class="button-group" role="group" aria-label="Användaråtgärder">
+      <button type="button" id="saveUserBtn" aria-label="Spara användarinformation">
+        Spara användare
+      </button>
+      <button type="button" id="loadUserBtn" aria-label="Ladda sparad användarinformation">
+        Ladda användare
+      </button>
+    </div>
+  </form>
+</section>
+
+<aside 
+  class="saved-data" 
+  id="userOutput" 
+  role="status" 
+  aria-live="polite"
+  aria-label="Sparad användarinformation">
+</aside>
+
+<section aria-labelledby="comparison-heading">
+  <h2 id="comparison-heading">Jämför LocalStorage & SessionStorage</h2>
+  
+  <form id="comparisonForm" aria-label="Formulär för att testa LocalStorage och SessionStorage">
+    <label for="testInput">Testdata:</label>
+    <input 
+      type="text" 
+      id="testInput" 
+      name="testData"
+      placeholder="Testdata"
+      aria-label="Testdata för att jämföra lagringsmetoder"
+    >
+    
+    <fieldset class="button-group">
+      <legend class="visually-hidden">Lagringsalternativ</legend>
+      
+      <button 
+        type="button" 
+        id="saveLocalBtn" 
+        aria-label="Spara i LocalStorage">
+        Spara i LocalStorage
+      </button>
+      
+      <button 
+        type="button" 
+        id="saveSessionBtn" 
+        aria-label="Spara i SessionStorage">
+        Spara i SessionStorage
+      </button>
+      
+      <button 
+        type="button" 
+        id="loadBothBtn" 
+        aria-label="Ladda data från båda lagringsmetoderna">
+        Ladda båda
+      </button>
+    </fieldset>
+  </form>
+</section>
+
+<aside 
+  class="saved-data" 
+  id="comparisonOutput" 
+  role="status" 
+  aria-live="polite"
+  aria-label="Jämförelseresultat">
+</aside>
+
+  </main>
+
+  
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events Demo</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      margin: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+        <label for="textInput">Text input:</label>
+        <input type="text" id="textInput" placeholder="Type anything...">
+        <p id="keyInfo">Press any key</p>
+    </section>
+    <section class="box" id="myBox">Klicka på mig!</section>
+    <p id="info">Event-info visas här</p>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>

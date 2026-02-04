@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36717.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkshopDatabaseFirst", "WorkshopDatabaseFirst\WorkshopDatabaseFirst.csproj", "{E78933EA-9900-4CD2-A028-3D33E014E282}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E78933EA-9900-4CD2-A028-3D33E014E282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E78933EA-9900-4CD2-A028-3D33E014E282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E78933EA-9900-4CD2-A028-3D33E014E282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E78933EA-9900-4CD2-A028-3D33E014E282}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C3565863-95EF-4E22-A078-6F1EFA1BBD5E}
+	EndGlobalSection
+EndGlobal

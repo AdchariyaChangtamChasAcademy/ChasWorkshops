@@ -1,0 +1,258 @@
+/* Reset & base */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 1.25rem;                    /* 20px */
+  background-color: #f5f5f5;
+}
+
+/* Container */
+
+main {
+  max-width: 37.5rem;                  /* 600px */
+  margin: 2.5rem auto;                 /* 40px auto */
+  background-color: white;
+  padding: 2rem;                       /* 32px */
+  border-radius: 0.5rem;               /* 8px */
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* Headlines */
+
+h1 {
+  font-size: clamp(1.5rem, 4vw, 2rem); /* Responsive size */
+  margin-bottom: 1.5rem;               /* 24px */
+  color: #333;
+  text-align: center;
+}
+
+h2 {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  margin-bottom: 1rem;                 /* 16px */
+  color: #555;
+}
+
+/* Form-section */
+
+section {
+  margin-bottom: 2rem;                 /* 32px */
+}
+
+/* Form */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;                        /* 12px */
+}
+
+/* Label */
+
+label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.25rem;              /* 4px */
+}
+
+/* Input */
+
+input {
+  padding: 0.75rem;                    /* 12px */
+  font-size: 1rem;                     /* 16px */
+  border: 2px solid #ddd;
+  border-radius: 0.25rem;              /* 4px */
+  transition: border-color 0.3s ease;
+  width: 100%;                         /* Responsive width */
+}
+
+input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+/* Buttons */
+
+.button-group {
+  display: flex;
+  gap: 0.625rem;                       /* 10px */
+  flex-wrap: wrap;                     /* Linebreak small screens */
+  margin-top: 1rem;                    /* 16px */
+}
+
+button {
+  flex: 1;
+  min-width: 6.25rem;                  /* 100px - min width */
+  padding: 0.75rem 1.25rem;            /* 12px 20px */
+  font-size: 1rem;                     /* 16px */
+  font-weight: 600;
+  border: none;
+  border-radius: 0.25rem;              /* 4px */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Button colors */
+
+#saveBtn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#saveBtn:hover {
+  background-color: #45a049;
+}
+
+#loadBtn {
+  background-color: #2196F3;
+  color: white;
+}
+
+#loadBtn:hover {
+  background-color: #0b7dda;
+}
+
+#clearBtn {
+  background-color: #f44336;
+  color: white;
+}
+
+#clearBtn:hover {
+  background-color: #da190b;
+}
+
+/* Output area */
+
+.saved-data {
+  margin-top: 1.5rem;                  /* 24px */
+  padding: 1rem;                       /* 16px */
+  background-color: #f9f9f9;
+  border-left: 4px solid #4CAF50;
+  border-radius: 0.25rem;              /* 4px */
+  min-height: 3rem;                    /* 48px */
+}
+
+.saved-data:empty::before {
+  content: "Ingen data sparad ännu...";
+  color: #999;
+  font-style: italic;
+}
+
+/* Media queries */
+
+/* Tablets and smaller screens (768px) */
+@media (max-width: 48rem) {
+  main {
+    padding: 1.5rem;                   /* 24px */
+    margin: 1.5rem auto;               /* 24px auto */
+  }
+  
+  h1 {
+    font-size: 1.75rem;                /* 28px */
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  button {
+    width: 100%;
+  }
+}
+
+/* Mobile (480px) */
+@media (max-width: 30rem) {
+  body {
+    padding: 0.5rem;                   /* 8px */
+  }
+  
+  main {
+    padding: 1rem;                     /* 16px */
+    margin: 1rem auto;                 /* 16px auto */
+  }
+  
+  h1 {
+    font-size: 1.5rem;                 /* 24px */
+  }
+  
+  h2 {
+    font-size: 1.25rem;                /* 20px */
+  }
+  
+  input, button {
+    font-size: 0.9375rem;              /* 15px */
+  }
+}
+
+/* Big screens (1200px) */
+@media (min-width: 75rem) {
+  main {
+    max-width: 43.75rem;               /* 700px */
+  }
+}
+/* Fieldset for buttons */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+fieldset legend {
+  padding: 0;
+}
+
+/* Hide legend visually but keep for screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Specific button styles for comparison section */
+#saveLocalBtn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#saveLocalBtn:hover {
+  background-color: #45a049;
+}
+
+#saveSessionBtn {
+  background-color: #FF9800;
+  color: white;
+}
+
+#saveSessionBtn:hover {
+  background-color: #e68900;
+}
+
+#loadBothBtn {
+  background-color: #9C27B0;
+  color: white;
+}
+
+#loadBothBtn:hover {
+  background-color: #7B1FA2;
+}

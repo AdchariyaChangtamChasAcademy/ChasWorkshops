@@ -1,0 +1,106 @@
+/* Reset och grundläggande styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Grid-container - mobile */
+.container {
+  display: grid;
+  grid-template-columns: 1fr; /* En kolumn för mobil */
+  grid-template-areas:
+    "header"
+    "main"      /* Main före sidebar på mobil (content-first!) */
+    "sidebar"
+    "footer";
+  min-height: 100vh;
+  gap: 1rem;
+}
+
+/* Header - mobilanpassad bas */
+.header {
+  grid-area: header;
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem;
+}
+
+.header h1 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem; /* Mindre för mobil */
+}
+
+.header nav ul {
+  display: flex;
+  flex-wrap: wrap; /* Wrappa på mobil */
+  gap: 1rem;
+  list-style: none;
+  justify-content: center; /* Centrera på mobil */
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.header nav a:hover,
+.header nav a:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: none;
+}
+
+.header nav a[aria-current="page"] {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+}
+
+/* Sidebar - mobilanpassad bas */
+.sidebar {
+  grid-area: sidebar;
+  background-color: #ecf0f1;
+  padding: 1rem;
+}
+
+/* MEDIA QUERY FÖR DESKTOP (min-width = mobile-first!) */
+@media (min-width: 769px) {
+  /* Grid-layout för desktop */
+  .container {
+    grid-template-columns: 250px 1fr; /* Två kolumner för desktop */
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer footer";
+  }
+  
+  /* Header-förbättringar för desktop */
+  .header {
+    padding: 1.5rem 2rem; /* Mer padding på desktop */
+  }
+  
+  .header h1 {
+    font-size: 1.75rem; /* Större rubrik på desktop */
+  }
+  
+  .header nav ul {
+    justify-content: flex-start; /* Vänsterjusterad på desktop */
+    gap: 2rem; /* Större gap på desktop */
+    flex-wrap: nowrap; /* Ingen wrapping på desktop */
+  }
+  
+  /* Sidebar-förbättringar för desktop */
+  .sidebar {
+    padding: 1.5rem;
+  }
+}

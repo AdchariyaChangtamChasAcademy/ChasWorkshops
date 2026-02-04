@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidlayout med CSS Grid</title>
+  <link rel="stylesheet" href="stylesM.css">
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+      <h1>Min Webbplats</h1>
+      <nav role="navigation" aria-label="Huvudnavigation">
+        <ul>
+          <li><a href="#home" aria-current="page">Hem</a></li>
+          <li><a href="#about">Om oss</a></li>
+          <li><a href="#services">Tjänster</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <!-- Sidebar -->
+    <aside class="sidebar" role="complementary" aria-label="Sidoinnehåll">
+      <h2>Kategorier</h2>
+      <nav aria-label="Kategorinavigation">
+        <ul>
+          <li><a href="#kategori1">Webbutveckling</a></li>
+          <li><a href="#kategori2">Design</a></li>
+          <li><a href="#kategori3">Backend</a></li>
+          <li><a href="#kategori4">DevOps</a></li>
+        </ul>
+      </nav>
+      
+      <section class="widget">
+        <h3>Senaste inläggen</h3>
+        <ul>
+          <li><a href="#post1">CSS Grid vs Flexbox</a></li>
+          <li><a href="#post2">Responsiv design 2025</a></li>
+          <li><a href="#post3">Tillgänglighet på webben</a></li>
+        </ul>
+      </section>
+    </aside>
+    
+    <!-- Huvudinnehåll -->
+    <main class="main" role="main">
+      <article>
+        <h2>Välkommen till vår webbplats</h2>
+        <p>Detta är huvudinnehållet på sidan. Här kan du lägga till ditt innehåll med artiklar, blogginlägg eller annan viktig information.</p>
+        
+        <section>
+          <h3>Om CSS Grid</h3>
+          <p>CSS Grid är ett kraftfullt verktyg för att skapa tvådimensionella layouter. Med Grid kan du enkelt definiera både rader och kolumner samtidigt.</p>
+        </section>
+        
+        <section>
+          <h3>Fördelar med Grid</h3>
+          <ul>
+            <li>Enkel att skapa komplexa layouter</li>
+            <li>Inbyggd responsivitet</li>
+            <li>Semantiska grid-områden</li>
+            <li>Perfekt för sidlayouter</li>
+          </ul>
+        </section>
+      </article>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <p>&copy; 2025 Min Webbplats. Alla rättigheter förbehållna.</p>
+      <nav aria-label="Fotnavigation">
+        <ul>
+          <li><a href="#privacy">Integritetspolicy</a></li>
+          <li><a href="#terms">Användarvillkor</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </footer>
+    
+  </div>
+</body>
+</html>

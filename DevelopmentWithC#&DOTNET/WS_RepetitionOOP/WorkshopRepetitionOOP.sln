@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkshopRepetitionOOP", "WorkshopRepetitionOOP\WorkshopRepetitionOOP.csproj", "{F32469AB-88AD-4447-A2DF-30E4A02200D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F32469AB-88AD-4447-A2DF-30E4A02200D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F32469AB-88AD-4447-A2DF-30E4A02200D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F32469AB-88AD-4447-A2DF-30E4A02200D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F32469AB-88AD-4447-A2DF-30E4A02200D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F3EF4602-5E3B-44E0-BB4D-C667BF5D3413}
+	EndGlobalSection
+EndGlobal

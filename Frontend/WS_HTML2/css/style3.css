@@ -1,0 +1,131 @@
+/* Reset */
+body,header,h1,h2,h3,p,ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* General page styles */
+
+body, html, canvas {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+body {
+    font-family: 'Fira Code', monospace;
+    line-height: 1.6;
+    background: #023a35;
+    color: #e6edf3;
+}
+
+/* Navigation bar */
+header {
+    background: #071c1a;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #303d3c;
+}
+
+h1{
+    color: #b6e3d8;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 30vh;
+    background: #1d6862;
+    color: #e6edf3;
+    padding: 2rem;
+}
+
+/* Hero content with fade-in */
+.hero-content {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hero heading */
+.hero-content h2 {
+    font-size: 1.4rem;
+}
+
+/* Sections */
+section {
+    max-width: 850px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #1d6862;
+    border-radius: 10px;
+    border: 1px solid #30363d;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+section h2 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+}
+
+section h3 {
+    color: #ffffffa2;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* links */
+a {
+    color: #ffffff;
+    list-style: square inside;
+    margin-bottom: 1rem;
+}
+
+/* Lists */
+ul {
+    list-style: square inside;
+    margin-bottom: 1rem;
+}
+
+/* Images */
+
+.project-image {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+.hero-image {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+aside {
+    list-style: square inside;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #071c1a;
+    border-top: 1px solid #30363d;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #8b949e;
+}
