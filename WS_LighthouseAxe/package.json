@@ -1,0 +1,22 @@
+{
+  "name": "ws_lighthouseaxe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "serve": "http-server . -p 8080",
+    "lighthouse": "lhci autorun"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@lhci/cli": "^0.15.1",
+    "http-server": "^14.1.1",
+    "jest": "^30.2.0",
+    "jest-axe": "^10.0.0",
+    "jest-environment-jsdom": "^30.2.0"
+  }
+}
