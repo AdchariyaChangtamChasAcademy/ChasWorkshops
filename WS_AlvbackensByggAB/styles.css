@@ -1,0 +1,67 @@
+:root {
+  --brand-navy: #243A4A;
+  --brand-forest: #1F3A2E;
+  --accent: #C2A05B;
+  --font-sans: 'Arial', sans-serif;
+}
+
+* { 
+    box-sizing: border-box; 
+    margin:0; padding:0; 
+}
+
+body { 
+    font-family: var(--font-sans); 
+    line-height: 1.6; color:#243A4A; 
+    scroll-behavior: smooth; 
+}
+
+a { 
+    text-decoration: none; 
+    color: inherit; 
+}
+
+header { 
+    background: var(--brand-navy); 
+    color:#fff; position: sticky; 
+    top:0; z-index:1000; 
+}
+
+.nav-container { 
+    display:flex; 
+    justify-content:space-between;
+     align-items:center;
+      padding:1rem 2rem; 
+}
+.nav-links { list-style:none; display:flex; gap:1rem; }
+.nav-links a:hover { color: var(--accent); }
+
+.hero { padding: 4rem 2rem; text-align:center; background:#f0f5f5; }
+.hero h1 { font-size:2rem; margin-bottom:1rem; }
+.hero p { max-width:600px; margin:0 auto 2rem; }
+.btn-primary, .btn-secondary { padding:0.75rem 1.5rem; margin:0 0.5rem; border-radius:5px; }
+.btn-primary { background: var(--brand-forest); color:#fff; }
+.btn-secondary { background: transparent; border:2px solid var(--brand-forest); color: var(--brand-forest); }
+
+.values, .services, .process, .quality, .references, .contact { padding:3rem 2rem; }
+.values { display:grid; grid-template-columns:1fr; gap:1.5rem; text-align:center; }
+.value-card { background:#f8f8f8; padding:1.5rem; border-radius:10px; }
+.services-grid, .references-grid { display:grid; grid-template-columns:1fr; gap:1rem; }
+.service-card, .reference-card { background:#f0f5f5; padding:1.5rem; border-radius:10px; }
+
+.contact form { display:flex; flex-direction:column; gap:1rem; max-width:500px; margin:auto; }
+input, textarea { padding:0.5rem; border:1px solid #ccc; border-radius:5px; width:100%; }
+input:focus, textarea:focus { outline:2px solid var(--brand-forest); }
+
+footer { background:#243A4A; color:#fff; text-align:center; padding:2rem; margin-top:2rem; }
+.footer-links { display:flex; justify-content:center; list-style:none; gap:1rem; margin-top:1rem; }
+.footer-links a:hover { color: var(--accent); }
+
+/* Responsive */
+@media(min-width:600px) {
+  .values, .services-grid, .references-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media(min-width:900px) {
+  .values, .services-grid, .references-grid { grid-template-columns: repeat(3,1fr); }
+  .hero h1 { font-size:3rem; }
+}

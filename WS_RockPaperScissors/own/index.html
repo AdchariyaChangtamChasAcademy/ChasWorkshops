@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rock Paper Scissors</title>
+<link rel="stylesheet" href="/own/style.css">
+</head>
+<body>
+
+<main class="battle">
+
+<section class="status-bar top">
+  <section class="enemy">
+    <p>Rival</p>
+    <progress value="100" max="100" id="enemy-hp"></progress>
+  </section>
+</section>
+
+<section class="arena">
+  <section class="character enemy top-right">
+    <span class="hand enemy-hand" id="enemy-hand"></span>
+    <span class="score-pop" id="enemy-pop">-1</span>
+    <span class="sprite">🧙‍♂️</span>
+  </section>
+
+  <section class="character player bottom-left">
+    <span class="score-pop" id="player-pop">-1</span>
+    <span class="sprite">🧑‍🚀</span>
+    <span class="hand player-hand" id="player-hand"></span>
+  </section>
+</section>
+
+<section class="status-bar bottom">
+  <section class="player">
+    <p>You</p>
+    <progress value="100" max="100" id="player-hp"></progress>
+  </section>
+</section>
+
+<section class="controls">
+  <button data-move='rock'>✊</button>
+  <button data-move='paper'>✋</button>
+  <button data-move='scissors'>✌️</button>
+</section>
+
+</main>
+
+
+<script src="/own/script.js"></script>
+</body>
+</html>

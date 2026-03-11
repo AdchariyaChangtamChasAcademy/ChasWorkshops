@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Älvbackens Bygg AB – Tryggt byggande</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER & NAV -->
+  <header>
+    <nav class="nav-container">
+      <a href="#hero" class="logo">Älvbackens Bygg</a>
+      <ul class="nav-links">
+        <li><a href="#tjanster">Tjänster</a></li>
+        <li><a href="#referenser">Referenser</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <header>
+        <h1>Tryggt byggande. Byggt för att hålla.</h1>
+        <p>Älvbackens Bygg är din lokala byggpartner för ROT- och småhusprojekt i Västerbotten. Tydliga ramar, noggrann planering och kvalitet du kan lita på.</p>
+      </header>
+      <nav class="hero-cta">
+        <a href="#kontakt" class="btn-primary">Be om offert</a>
+        <a href="#tjanster" class="btn-secondary">Se tjänster</a>
+      </nav>
+    </section>
+
+    <!-- VÄRDEBLOCK -->
+    <section class="values" aria-label="Våra värden">
+      <article class="value-card">
+        <h2>Tydlighet</h2>
+        <p>Vi gör arbetet transparent och kommunicerar varje steg.</p>
+      </article>
+      <article class="value-card">
+        <h2>Pålitlighet</h2>
+        <p>Vi håller överenskommelser och levererar i tid.</p>
+      </article>
+      <article class="value-card">
+        <h2>Noggrannhet</h2>
+        <p>Vi arbetar med precision och ansvar för varje detalj.</p>
+      </article>
+      <article class="value-card">
+        <h2>Dokumentation</h2>
+        <p>Vi dokumenterar allt från start till överlämning.</p>
+      </article>
+    </section>
+
+    <!-- TJÄNSTER -->
+    <section id="tjanster" class="services">
+      <header><h2>Våra tjänster</h2></header>
+      <ul class="services-grid">
+        <li class="service-card">Takbyte</li>
+        <li class="service-card">Fönsterbyte</li>
+        <li class="service-card">Altaner & uterum</li>
+        <li class="service-card">Utbyggnader</li>
+        <li class="service-card">Garage/komplementbyggnader</li>
+        <li class="service-card">Mindre nybyggnationer</li>
+      </ul>
+    </section>
+
+    <!-- SÅ JOBBAR VI -->
+    <section class="process">
+      <header><h2>Så jobbar vi</h2></header>
+      <ol>
+        <li>Platsbesök & behov</li>
+        <li>Offert & avtal</li>
+        <li>Genomförande</li>
+        <li>Slutkontroll & överlämning</li>
+      </ol>
+    </section>
+
+    <!-- KVALITET & TRYGGHET -->
+    <section class="quality">
+      <header><h2>Kvalitet & trygghet</h2></header>
+      <ul>
+        <li>Tydlig omfattning och avtal</li>
+        <li>Egenkontroller</li>
+        <li>Fotodokumentation</li>
+        <li>Ordning & säkerhet på arbetsplatsen</li>
+        <li>Slutstädning & garantiöverlämning</li>
+      </ul>
+    </section>
+
+    <!-- REFERENSER -->
+    <section id="referenser" class="references">
+      <header><h2>Referenser</h2></header>
+      <ul id="references-container">
+        <!-- Dynamically rendered via JS as <li> with <article> inside -->
+      </ul>
+    </section>
+
+    <!-- KONTAKT / OFFERT -->
+    <section id="kontakt" class="contact">
+      <header><h2>Kontakta oss / Be om offert</h2></header>
+      <form id="contact-form">
+        <label for="name">Namn</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">E-post</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Beskriv kort vad du vill göra</label>
+        <textarea id="message" name="message" placeholder="Till exempel: typ av arbete, ungefärlig omfattning och önskad tidsperiod." required></textarea>
+
+        <button type="submit">Skicka offertförfrågan</button>
+        <p id="form-feedback" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Älvbackens Bygg AB – Västerbotten | Telefon: 070-XXX XX XX | E-post: info@alvbackensbygg.se</p>
+    <nav>
+      <ul class="footer-links">
+        <li><a href="#tjanster">Tjänster</a></li>
+        <li><a href="#referenser">Referenser</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

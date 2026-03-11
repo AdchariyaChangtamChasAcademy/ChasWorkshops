@@ -13,7 +13,16 @@ namespace WS_AsyncPaging.Controllers
     public class ProductsController : ControllerBase
     {
         // Låtsas-databas för exemplet
-        private static readonly List<Product> _products = new();
+        private static readonly List<Product> _products = Enumerable.Range(1, 1000)
+            .Select(i => new Product
+            {
+                Id = i,
+                Name = $"Produkt {i}",
+                Description = "Simulerad produkt för paging",
+                Price = 100,
+                CreatedAt = DateTime.UtcNow,
+                InternalAdminNote = "Autogenererad"
+            }).ToList();
 
         // En privat variabel för att spara tjänsten vi får in
         private readonly IProductService _productService;
@@ -62,7 +71,7 @@ namespace WS_AsyncPaging.Controllers
         [HttpGet("all")]
         public ActionResult<IEnumerable<ProductResponse>> GetProducts()
         {
-            throw new Exception("Hjälp, databasen brinner!");
+            // throw new Exception("Hjälp, jag krashar!");
 
             // Vi använder LINQ för att mappa listan av Entities till en lista av DTO:er
             var responseList = _products.Select(p => new ProductResponse(
@@ -81,6 +90,7 @@ namespace WS_AsyncPaging.Controllers
         [HttpGet("{id}", Name = "GetProductById")]
         public async Task<ActionResult<ProductResponse>> GetProductById(int id)
         {
+            
             var product = await _productService.GetProductByIdAsync(id);
 
             if (product == null)
