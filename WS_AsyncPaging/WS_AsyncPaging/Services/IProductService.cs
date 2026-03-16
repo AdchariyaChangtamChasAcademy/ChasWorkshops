@@ -8,8 +8,8 @@ namespace WS_AsyncPaging.Services
         IEnumerable<ProductResponse> GetAllProducts();
         ProductResponse? GetProductById(int id);
         ProductResponse CreateProduct(CreateProductRequest request);
-        bool UpdateProduct(int id, UpdateProductRequest request);
-        bool DeleteProduct(int id);
+        void UpdateProduct(int id, UpdateProductRequest request);
+        void DeleteProduct(int id);
 
 
         // Task betyder: "Jag lovar att ge dig detta... lite senare"
@@ -17,7 +17,7 @@ namespace WS_AsyncPaging.Services
         Task<IEnumerable<ProductResponse>> GetAllProductsAsync();
         Task<ProductResponse?> GetProductByIdAsync(int id);
         Task<ProductResponse> CreateProductAsync(CreateProductRequest request);
-        Task<bool> UpdateProductAsync(int id, UpdateProductRequest request);
-        Task<bool> DeleteProductAsync(int id);
+        Task UpdateProductAsync(int id, UpdateProductRequest request);
+        Task DeleteProductAsync(int id);
     }
 }

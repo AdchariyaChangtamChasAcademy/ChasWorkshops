@@ -1,10 +1,13 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using WS_AsyncPaging.Exeptions;
 using WS_AsyncPaging.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-// 1. Lägg till tjänster i Dependency Injection-containern (Motorn)
-
+// Lägg till tjänster i Dependency Injection-containern (Motorn)
 builder.Services.AddControllers();
 
 // Register CustomerService for DI
@@ -18,12 +21,73 @@ builder.Services.AddEndpointsApiExplorer(); // Hjälper Swagger att hitta alla di
 builder.Services.AddSwaggerGen(); // Lägger till tjänsten som genererar Swagger-dokumentationen
 
 builder.Services.AddProblemDetails();
+builder.Services.AddProblemDetails(options => {
+    // Här kan vi anpassa hur felet ska se ut globalt
+    options.CustomizeProblemDetails = context =>
+    {
+        context.ProblemDetails.Instance = context.HttpContext.Request.Path;
+    };
+});
 
-#pragma warning disable EXTEXP0018 //HybridCache är preview/experimental beroende på specifik .NET 9-version
+//HybridCache är preview/experimental beroende på specifik .NET 9-version
+#pragma warning disable EXTEXP0018 
 builder.Services.AddHybridCache();
 #pragma warning restore EXTEXP0018
 
+// Authentication-tjänsten
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!))
+        };
+    });
+
+// Authorization-tjänsten
+builder.Services.AddAuthorization();
+
 var app = builder.Build();
+
+// Detta ska ligga HÖGST UPP i din middleware-pipeline (precis efter var app = builder.Build();) 
+app.UseExceptionHandler(exceptionApp =>
+{
+    exceptionApp.Run(async context =>
+    {
+        // 1. Fånga felet som kastades
+        var exception = context.Features.Get<Microsoft.AspNetCore.Diagnostics.IExceptionHandlerFeature>()?.Error;
+
+        // 2. Mappa felet till rätt Statuskod och Titel
+        var problemDetails = exception switch
+        {
+            NotFoundException ex => new Microsoft.AspNetCore.Mvc.ProblemDetails
+            {
+                Status = 404,
+                Title = "Not Found",
+                Detail = ex.Message
+            },
+            // Fånga alla andra (okända) fel
+            _ => new Microsoft.AspNetCore.Mvc.ProblemDetails
+            {
+                Status = 500,
+                Title = "Internal Server Error",
+                Detail = "Ett oväntat fel inträffade. Försök igen senare."
+            }
+        };
+
+        // 3. Sätt rätt statuskod på HTTP-svaret och skicka tillbaka JSON 
+        context.Response.StatusCode = problemDetails.Status ?? 500;
+        context.Response.ContentType = "application/problem+json";
+        await context.Response.WriteAsJsonAsync(problemDetails);
+    });
+});
 
 // Configure the HTTP request pipeline.
 // 2. Konfigurera Middleware-pipelinen (Där HTTP-requesten passerar)
@@ -34,10 +98,24 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(); // Skapar det grafiska gränssnittet i webbläsaren
 }
 
-app.UseHttpsRedirection(); // Tvingar trafik över säker anslutning
+// Tvingar trafik över säker anslutning
+app.UseHttpsRedirection(); 
+
+// Routing kartlägger vilken Controller som ska anropas
+app.UseRouting();
+
+// Authenticate: "Vem är du? Visa leg!"
+app.UseAuthentication();
+
+// Authorize: "Vad får du göra? Får du vara här?"
+app.UseAuthorization();
+
+app.MapControllers();
 
 app.UseAuthorization();
 
-app.MapControllers(); // Talar om för appen att lyssna efter anrop till dina controllers
+// Talar om för appen att lyssna efter anrop till dina controllers
+app.MapControllers();
 
-app.Run(); // Startar servern
+// Startar servern
+app.Run();

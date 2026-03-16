@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Caching.Hybrid;
 using WS_AsyncPaging.DTOs;
+using WS_AsyncPaging.Exeptions;
 using WS_AsyncPaging.Models;
 using static WS_AsyncPaging.DTOs.PaginationDTOs;
 
@@ -105,7 +106,10 @@ namespace WS_AsyncPaging.Services
                 }
             );
 
-            if (product == null) return null;
+            if (product == null)
+            {
+                throw new NotFoundException($"Produkten med ID:{id} finns inte i databasen.");
+            }
 
             return new ProductResponse(product.Id, product.Name, product.Description, product.Category, product.Price, product.Stock, product.CreatedAt);
         }
@@ -127,12 +131,15 @@ namespace WS_AsyncPaging.Services
             return new ProductResponse(newProduct.Id, newProduct.Name, newProduct.Description, newProduct.Category, newProduct.Price, newProduct.Stock, newProduct.CreatedAt);
         }
 
-        public async Task<bool> UpdateProductAsync(int id, UpdateProductRequest request)
+        public async Task UpdateProductAsync(int id, UpdateProductRequest request)
         {
             await Task.Delay(20);
             var product = _products.FirstOrDefault(p => p.Id == id);
 
-            if (product == null) return false;
+            if (product == null)
+            {
+                throw new NotFoundException($"Produkten med ID:{id} finns inte i databasen.");
+            }
 
             // 1. Uppdatera Entiteten med de nya värdena
             product.Name = request.Name;
@@ -142,24 +149,20 @@ namespace WS_AsyncPaging.Services
             // 2. CACHE INVALIDATION: Rensa cachen så att nästa person som gör GET får den nya datan!
             await _cache.RemoveAsync($"product_{id}");
 
-            return true;
-
         }
 
-        public async Task<bool> DeleteProductAsync(int id)
+        public async Task DeleteProductAsync(int id)
         {
-            await Task.Delay(20);
             var product = _products.FirstOrDefault(p => p.Id == id);
 
-            if (product == null) return false;
+            if (product == null)
+            {
+                throw new NotFoundException($"Produkten med ID:{id} finns inte i databasen.");
+            }
 
-            // 1. Radera produkten
             _products.Remove(product);
 
-            // 2. CACHE INVALIDATION: Rensa cachen eftersom produkten inte längre finns!
             await _cache.RemoveAsync($"product_{id}");
-
-            return true;
         }
 
         public IEnumerable<ProductResponse> GetAllProducts()
@@ -202,32 +205,23 @@ namespace WS_AsyncPaging.Services
             );
         }
 
-        public bool UpdateProduct(int id, UpdateProductRequest request)
+        public void UpdateProduct(int id, UpdateProductRequest request)
         {
             var product = _products.FirstOrDefault(p => p.Id == id);
-            if (product == null) return false;
 
             // Uppdatera entiteten med de nya värdena
             product.Name = request.Name;
             product.Description = request.Description;
             product.Price = request.Price;
-
-            return true;
         }
 
-        public bool DeleteProduct(int id)
+        public void DeleteProduct(int id)
         {
             // Leta i databasen
             var product = _products.FirstOrDefault(p => p.Id == id);
 
-            // Om den inte finns, returnera false
-            if (product == null) return false;
-
             // Radera produkten
             _products.Remove(product);
-
-            // Returnera true för att visa att den är raderad
-            return true;
         }
 
 

@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using WS_AsyncPaging.DTOs;
@@ -93,11 +94,6 @@ namespace WS_AsyncPaging.Controllers
             
             var product = await _productService.GetProductByIdAsync(id);
 
-            if (product == null)
-            {
-                return NotFound(); // 404 Not Found
-            }
-
             // Mappa till DTO innan vi skickar tillbaka
             var response = new ProductResponse(
                 product.Id,
@@ -114,41 +110,30 @@ namespace WS_AsyncPaging.Controllers
 
         [HttpPut("{id}")]
         // Vi tar emot en UpdateProductRequest
-        public IActionResult UpdateProduct(int id, [FromBody] UpdateProductRequest request)
+        public async Task<ActionResult> UpdateProduct(int id, [FromBody] UpdateProductRequest request)
         {
             var product = _products.FirstOrDefault(p => p.Id == id);
 
-            if (product == null)
-            {
-                return NotFound(); // 404 Not Found
-            }
-
             // Uppdatera Entiteten med värden från vår DTO
+            // Service bör hantera null product
             product.Name = request.Name;
             product.Description = request.Description;
             product.Category = request.Category;
             product.Price = request.Price;
             product.Stock = request.Stock;
 
+            await _productService.UpdateProductAsync(id, request);
+
             // Vid framgångsrik PUT returnerar man oftast 204 No Content
             return NoContent();
         }
 
+        [Authorize]
         [HttpDelete("{id}")]
-        // Vi tar emot en DeleteProduct
-        public IActionResult DeleteProduct(int id)
+        public async Task<ActionResult> DeleteProduct(int id)
         {
-            var product = _products.FirstOrDefault(p => p.Id == id);
+            await _productService.DeleteProductAsync(id);
 
-            if (product == null)
-            {
-                return NotFound(); // 404 Not Found
-            }
-
-            // Tar bort product från registret
-            _products.Remove(product);
-
-            // Vid framgångsrik PUT returnerar man oftast 204 No Content
             return NoContent();
         }
 
