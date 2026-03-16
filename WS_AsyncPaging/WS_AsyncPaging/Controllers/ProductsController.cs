@@ -9,6 +9,7 @@ using static WS_AsyncPaging.DTOs.PaginationDTOs;
 
 namespace WS_AsyncPaging.Controllers
 {
+    [Authorize]
     [Route("api/products")]
     [ApiController]
     public class ProductsController : ControllerBase
@@ -69,6 +70,7 @@ namespace WS_AsyncPaging.Controllers
             return CreatedAtAction(nameof(GetProductById), new { id = response.Id }, response);
         }
 
+        [AllowAnonymous]
         [HttpGet("all")]
         public ActionResult<IEnumerable<ProductResponse>> GetProducts()
         {

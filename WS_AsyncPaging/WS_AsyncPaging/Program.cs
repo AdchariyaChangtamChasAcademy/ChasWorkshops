@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using System.Text;
 using WS_AsyncPaging.Exeptions;
 using WS_AsyncPaging.Services;
@@ -18,9 +19,42 @@ builder.Services.AddSingleton<IProductService, ProductService>();
 
 // Aktivera Swagger
 builder.Services.AddEndpointsApiExplorer(); // Hjälper Swagger att hitta alla dina URL:er
-builder.Services.AddSwaggerGen(); // Lägger till tjänsten som genererar Swagger-dokumentationen
+//builder.Services.AddSwaggerGen(); // Lägger till tjänsten som genererar Swagger-dokumentationen
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "My Awesome API",
+        Version = "v1"
+    });
 
-builder.Services.AddProblemDetails();
+    // JWT Authentication
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Description = "Enter JWT token like this: Bearer {your token}",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.Http,
+        Scheme = "bearer",
+        BearerFormat = "JWT"
+    });
+
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
+});
+
 builder.Services.AddProblemDetails(options => {
     // Här kan vi anpassa hur felet ska se ut globalt
     options.CustomizeProblemDetails = context =>
@@ -108,10 +142,6 @@ app.UseRouting();
 app.UseAuthentication();
 
 // Authorize: "Vad får du göra? Får du vara här?"
-app.UseAuthorization();
-
-app.MapControllers();
-
 app.UseAuthorization();
 
 // Talar om för appen att lyssna efter anrop till dina controllers
